@@ -1,0 +1,7 @@
+f = {}
+for n in range(2100, 20, -1):
+    if n > 2000:
+        f[n] = 16
+    else:
+        f[n] = 2 * f[n + 3]
+print(f[50] / f[110])
