@@ -1,0 +1,12 @@
+s = [int(i) for i in open('17_19900.txt').readlines()]
+sm = sum([i for i in s if len(str(abs(i))) == 4])
+k, m = 0, 10 ** 15
+for i in range(len(s) - 2):
+    a, b, c = s[i], s[i + 1], s[i + 2]
+    d = a, b, c
+    if [len(str(abs(j))) == 3 for j in d].count(True) == 2:
+        p = a * b * c
+        if p > sm:
+            k += 1
+            m = min(m, p)
+print(k, abs(m))
