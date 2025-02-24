@@ -1,0 +1,15 @@
+s = open('24_19884.txt').readline()
+s = s.replace('-', '*')
+s = s.replace('*0*', 'x')
+s = s.replace('*0', ' ')
+s = s.replace('x', '*0*')
+s = s.replace('6', '1').replace('7', '1').replace('8', '1').replace('9', '1')
+for i in range(11, 1, -1):
+    s = s.replace('*' * i, ' ')
+s = s.split()
+k = 0
+for x in s:
+    if '*' in x:
+        print(x)
+        k += 1
+print(k)
