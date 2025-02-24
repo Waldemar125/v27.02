@@ -1,0 +1,6 @@
+from itertools import product
+s = list(product('ГЕИНРСЯ', repeat=6))
+for i in range(len(s)):
+    x = ''.join(s[i])
+    if 'ГИРЯ' in x:
+        print(i + 1, x)
